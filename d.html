@@ -12,33 +12,7 @@
             <span id="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></span>
         </center>
         <script>
-            var $iframe = $("<iframe height='0px;' width='0px;' id='down' src='https://api.lailal.cc/lanzou-api/?url=https://www.lanzous.com/i3defqb&type=down'></iframe>").appendTo($('body'));
-            setTimeout(function(){
-                try {
-                    window.opener=null;
-                    window.open('','_self');
-                    window.close();
-                    WeixinJSBridge.call('closeWindow');
-                } catch (e) {
-
-                }
-            },7000);
-        </script>
-        <script>
-	    var ad = document.getElementsByTagName("img");
-        for(i=0;i<ad.length;i++){
-            var adstr = ad[i].src;
-            if(adstr.indexOf('000webhost.com') != -1){ ad[i].style.display = 'none'};
-        }
-        $('info-area').remove();
-        setInterval(function(){
-            var ad = document.getElementsByTagName("img");
-            for(i=0;i<ad.length;i++){
-                var adstr = ad[i].src;
-                if(adstr.indexOf('000webhost.com') != -1){ ad[i].style.display = 'none'};
-            }
-            $('info-area').remove();
-        },900);
+            location.href="/app/download.html"
         </script>
     </body>
 </html>
