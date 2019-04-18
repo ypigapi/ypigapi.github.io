@@ -1,0 +1,7 @@
+{
+  version: "3.9.0",
+  announce: "欢迎使用猪猪岛加速",
+  singleMobileData: "",
+  configureData: "",
+  hello: "world"
+}
