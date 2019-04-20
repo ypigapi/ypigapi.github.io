@@ -1,7 +1,7 @@
 {
   "version": "5.0.0",
   "access": "yes",
-  "announce": "欢迎使用猪猪岛加速!本次更新:\n\n1.更改接口为json格式，启动更快速啦!\n2.所有服务重新改为国家命名，更加清楚咯。3.删去提示框动画，反应更快速。\n\n已知问题:1.测试 服务暂无法使用。",
+  "announce": "欢迎使用猪猪岛加速!本次更新:\n\n1.恢复 测试 服务，尽情使用吧!\n\n",
   "singleMobileData": "",
   "configureData": "0eaadc1d5643b36f291faaf7d3ff1dd1a9fd571eb9c368369bc8c875b408349bea02607b370ffb3cb3dbff49843f4ceb526d70185832e3e6ea60c1235ac42b6286625b9a25ae4aa1f3014cbadc2029513025de56a9a5dee8c8876cd8ae1971aa3512fd5c9b5c3703bd85bdc341103904e2eecd8841edd98490d88e26610467e9ef6dcb388b7abe2ccf986bf0d10ce03e513d19fde4c13ff6c7432ef12ea0cf4461c924eb9757a0ccf5e81ed1abd0a978dda188b5bb69e0e9c5579ed462d4d92d1368b0573995",
   "hello": "world"
