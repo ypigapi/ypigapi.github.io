@@ -3,5 +3,14 @@
   "access": "yes",
   "announce": "欢迎使用猪猪岛加速!本次更新:\n\n1.恢复 测试 服务，尽情使用吧!\n\n",
   "singleMobileData": "",
-  "configureData": "0eaadc1d5650b5282940fbf4c4fa09d6f6fc5e05b1cd47449bccd16eb5113f87eb1a767a3a0ff73fbad7b10a8b7610fe0f212550467be4e9ba3fc7205b96206d954406c552b44ebbfc195bbfc32433523924d651a7ad90abc7ce30cdf35524e22b5bfa53cb033100bcd7b6cc523667599af4c99f4ff4c68395c3912262046fe1e46787378b33ab2c819c7daece0be3251f381da5bbea09b4e5422a8726a7c35e35c77a96d210e292b2e86286c9dba07b998ccb82c172faa693179dd26fccc57b4030b20561d05453333e42720cbf69c3ce0dd93bd7f860a7e6a5a4fa74"
+  "configureData": "0eaadc1d5650b5282940fbf4c4fa09d6f6fc5e05b1cd47449bccd16eb5113f87eb1a767a3a0ff73fbad7b10a8b7610fe0f212550467be4e9ba3fc7205b96206d954406c552b44ebbfc195bbfc32433523924d651a7ad90abc7ce30cdf35524e22b5bfa53cb033100bcd7b6cc523667599af4c99f4ff4c68395c3912262046fe1e46787378b33ab2c819c7daece0be3251f381da5bbea09b4e5422a8726a7c35e35c77a96d210e292b2e86286c9dba07b998ccb82c172faa693179dd26fccc57b4030b20561d05453333e42720cbf69c3ce0dd93bd7f860a7e6a5a4fa74",
+  "flowrateData":{
+      "useEncryption": "yes",
+      "flowrate": "2zh7sq"
+  },
+  "lines": {
+      "JapanLines": "tx8axqywqrxzfwldy6ripgaxgmyszd7fjmil0w3zbauklnt2f54to3c7l5ss95tt14s0mkwxy18ddrw37pmjfuyjijljmn3wkc030nfb81s7wcdxqzsbnb5i4w0ouofhbzhp1se7f7yp0i6fojcgihvx0wg0a945c8ma09twkq4uud0ddq2xqtm90w8oum5jh8l7y8g5fe1ik73ergwwp5z7g4432suz9lgdndoe9p5wxyvzn6toyd8u7m9dvchcj30j5t08m129e5q2v6wa1rhh9mxzgdy8u7awytgd",
+      "SingaporeLines": "pfxrwetne2umggyolzpozouii1bf6vtlwe5sskr9qmf380qeq0l4joclf3p4rfupfgml5k7grswn",
+      "OtherLines": "ytryd77omqx4qg8fc8r1c31lhzxrktwazdlupin98zqda8wwal8qneulqmjdldfondk7o5v8o86p18w9xpvsziegz9kqg0y4mj3mkzxuv9h1p0sqzm4kkp8e2nj6zgpagl8w"
+  }
 }
