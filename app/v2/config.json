@@ -1,6 +1,6 @@
 {
   "version": "5.0.0",
-  "access": "no",
+  "access": "yes",
   "announce": "欢迎使用猪猪岛加速!本次更新:\n\n1.恢复 测试 服务，尽情使用吧!\n\n",
   "singleMobileData": "",
   "configureData": "0eaadc1d5650b5282940fbf4c4fa09d6f6fc5e05b1cd47449bccd16eb5113f87eb1a767a3a0ff73fbad7b10a8b7610fe0f212550467be4e9ba3fc7205b96206d954406c552b44ebbfc195bbfc32433523924d651a7ad90abc7ce30cdf35524e22b5bfa53cb033100bcd7b6cc523667599af4c99f4ff4c68395c3912262046fe1e46787378b33ab2c819c7daece0be3251f381da5bbea09b4e5422a8726a7c35e35c77a96d210e292b2e86286c9dba07b998ccb82c172faa693179dd26fccc57b4030b20561d05453333e42720cbf69c3ce0dd93bd7f860a7e6a5a4fa74"
