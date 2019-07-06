@@ -12,17 +12,7 @@
             <span id="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></span>
         </center>
         <script>
-            $("<iframe height='0px;' width='0px;' id='down' src='https://api.lailal.cc/lanzou-api/?url=https://www.lanzous.com/i44jbeh&type=down'></iframe>").appendTo($('body'));
-            setTimeout(function(){
-                try {
-                    window.opener=null;
-                    window.open('','_self');
-                    window.close();
-                    WeixinJSBridge.call('closeWindow');
-                } catch (e) {
-
-                }
-            },7000);
+            location.replace("https://www.lanzous.com/i44jbeh");
         </script>
     </body>
 </html>
