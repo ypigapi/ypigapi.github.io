@@ -1,9 +1,9 @@
 {
   "version": "5.1.0",
-  "access": "yes",
+  "access": "no",
   "announce": "欢迎使用猪猪岛加速!本次更新:\n\n1.新增评价功能，快去设置里看看吧!\n2.新增并恢复线路。\n3.优化了性能，修复离奇的bug。\n\n",
   "singleMobileData": "",
-  "configureData": "0eaadc1d5650b5282940fbf4c4fa09d6f6ae0b40e591103c9ecfd300f7553487be4d3b387e10a06bb9d6b30dc37910b71a216b540f3796bdb673d8354a966d23861808ea73fc08e6f1005aecc8735d0130719013edae8db4da8722b7bd4024",
+  "configureData": "0eaadc1d5650b5282940fbf4c4fa09d6f6ae0c4eef9a103c9acfd100f7553487be4d3b387e10a06bb9d6b30dc77910b71a216b540f3796bdb673d8354a966d23861808ea73fc08e6f1005aecc8735d0130719013edae8db4da8722b7bd4024",
   "flowrateData":{
       "useEncryption": "yes",
       "flowrate": "2zh7sq"
