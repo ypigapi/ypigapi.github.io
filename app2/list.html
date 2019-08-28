@@ -37,6 +37,7 @@
 		additem(filename, "约 " + Math.ceil(e[i].size / 1024 / 1024) + "MB");
 	    }
 	    $("#loading").removeClass("is-active");
+	    $.getScript("https://ypig.tk/styles/material.min.js",null);
     }
     function additem(filename,size) {
                   $('<li class="mdl-list__item mdl-list__item--two-line"><span class="mdl-list__item-primary-content"><span style="color:black">' + filename +'</span><span class="mdl-list__item-sub-title"> / ' + size +'</span><a class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab" style="background:#ffffff;box-shadow:none;margin-left:5px;" href="#"><i class="material-icons">cloud_download</i></a></span></li></ul>').appendTo(".filelist");
