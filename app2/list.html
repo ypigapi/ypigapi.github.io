@@ -34,7 +34,7 @@
 		} else if (e[i].server_filename.indexOf(".") == 0) {
 			filename = filename.substr(1) + " 格式的文件";
 		}
-		additem(filename + e[i].server_filename, Math.ceil(e[i].size / 1024 / 1024));
+		additem(filename + e[i].server_filename, "约 " + Math.ceil(e[i].size / 1024 / 1024) + "MB");
 	    }
 	    $("#loading").removeClass("is-active");
     }
