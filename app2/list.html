@@ -1,0 +1,127 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+  <title>list page</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://ypig.tk/styles/globalSettings.js"></script>
+  <script src="https://ypig.tk/styles/saveSvgAsPng.js"></script>
+  <script>
+    function getQueryString(name) {
+	        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	        var url=decodeURI(decodeURI(window.location.search))
+	        var r = url.substr(1).match(reg);
+	        if (r != null) return unescape(r[2]); return null;
+	  }
+    function detectUa() {
+      var ua = window.navigator.userAgent.toLowerCase();
+      if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+           return true;
+      } else {
+           return false;
+      }
+    }
+    function additem(filename,size) {
+      console.log("oh");
+    }
+  $(document).ready(function() {
+	  if (getQueryString("search_keyword")) {
+      		$("#loading").addClass("is-active");
+	  }
+   });
+	</script>
+  <!--[if IE]>
+    <script src="https://ypig.tk/styles/ie.js"></script>
+  <![endif]-->
+</head>
+<!-- bing images https://api.isoyu.com/bing_images.php -->
+
+<body style="background-image:url('');background-color:#FCFCFC;" oncontextmenu='return false' ondragstart='return false' onselectstart='return false' onselect='document.selection.empty()' oncopy='document.selection.empty()' onbeforecopy='return false'
+  onmouseup='document.selection.empty()'>
+  <link rel='stylesheet prefetch' href='https://ypig.tk/styles/material.indigo-pink.min.css'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header" style="background-color:#2196F3;">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Ypiggy</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Search
+            <form action="">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="search_name" id="fixed-header-drawer-exp" />
+                    </div>
+                </div>
+            </form>-->
+
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title" style="color:#2196F3;">Ypig Inc.</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="https://ypig.tk/?isUpdateRead=true">Home</a>
+        <a class="mdl-navigation__link" href="https://ypig.tk/functions/vpn">Vpn Service</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="mdl-grid">
+        <!--<div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="background-image:url('https://t.cn/E5lQLkz');webkit-background-size: cover;background-size: cover;">
+            </div>-->
+        <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="background-color:#ffffff">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text" style="font-family:'Microsoft YaHei', Helvetica, Arial, sans-serif;">简歌</h2>
+          </div>
+          <div class="mdl-card__supporting-text post-excerpt" style="font-family:'Microsoft YaHei', Helvetica, Arial, sans-serif;">
+            <form action="">
+              <span class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input id="keyword" autocomplete="off" type="text" name="search_keyword" class="mdl-textfield__input" />
+                <label class="mdl-textfield__label">搜索好听的歌曲吧......</label>
+              </span>
+              <button type="submit" style="margin-left:10px;background-color:#2196F3;" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent">搜索</button>
+            </form>
+          </div>
+        </div>
+        <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="background-color:#ffffff">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text" style="font-family:'Microsoft YaHei', Helvetica, Arial, sans-serif;">查找结果</h2>
+          </div>  
+          <div class="mdl-card__supporting-text post-excerpt" style="font-family:'Microsoft YaHei', Helvetica, Arial, sans-serif;">
+            <!-- list start -->
+            
+            <!-- Two Line List with secondary info and action -->
+            <style>
+            .demo-list-two {
+              width: 300px;
+            }
+            </style>
+
+            <ul class="demo-list-two mdl-list">
+             <li class="mdl-list__item mdl-list__item--two-line">
+                <span class="mdl-list__item-primary-content">
+                  <i class="material-icons mdl-list__item-avatar">person</i>
+                  <span>Bryan Cranston</span>
+                  <span class="mdl-list__item-sub-title">62 Episodes</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                  <span class="mdl-list__item-secondary-info">Actor</span>
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+                </span>
+              </li>
+            </ul>
+            <span id="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner"></span>
+            <!-- list over -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src='https://ypig.tk/styles/material.min.js'></script>
+</body>
+
+</html>
