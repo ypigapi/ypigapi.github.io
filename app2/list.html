@@ -23,7 +23,7 @@
     }
     function parseJson(e) {
 	    try {
-	    	e = JSON.parse(decodeURIComponent(decodeURIComponent(escape(e))));
+	    	e = JSON.parse(decodeURI(decodeURI(escape(e).replace("%","%25"))));
 	    } catch (err) {
 	    	console.error(err);
 	    }
