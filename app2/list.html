@@ -28,13 +28,13 @@
 	    	console.error(err);
 	    }
 	    for (var i = 0;i < e.length;i++) {
-		var filename = "";
+		var filename = e[i].server_filename;
 	    	if (e[i].isdir == 1) {
 			filename = filename + "文件夹:";
 		} else if (e[i].server_filename.indexOf(".") == 0) {
 			filename = filename.substr(1) + " 格式的文件";
 		}
-		additem(filename + e[i].server_filename, "约 " + Math.ceil(e[i].size / 1024 / 1024) + "MB");
+		additem(filename, "约 " + Math.ceil(e[i].size / 1024 / 1024) + "MB");
 	    }
 	    $("#loading").removeClass("is-active");
     }
