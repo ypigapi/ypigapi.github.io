@@ -21,14 +21,32 @@
            return false;
       }
     }
+    function parseJson(e) {
+	    try {
+	    	e = JSON.parse(e);
+	    } catch (err) {
+	    	console.error(err);
+	    }
+	    for (var i = 0;i < e.length;i++) {
+		var filename = "";
+	    	if (e[i].isdir == 1) {
+			filename = filename + "文件夹:";
+		}
+		additem(filename + e[i].server_filename,e[i].size / 1024 / 1024);
+	    }
+    }
     function additem(filename,size) {
-      console.log("oh");
+                  $('<li class="mdl-list__item mdl-list__item--two-line"><span class="mdl-list__item-primary-content"><span style="color:black">' + filename +'</span><span class="mdl-list__item-sub-title"> / ' + size +'</span><a class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab" style="background:#ffffff;box-shadow:none;" href="#"><i class="material-icons">cloud_download</i></a>').appendTo(".filelist");
+                </span>
+              </li>
+            </ul>
     }
   $(document).ready(function() {
-	  if (getQueryString("search_keyword")) {
-      		$("#loading").addClass("is-active");
+          $("#loading").addClass("is-active");
+          $("header").attr("style","display:none;");
+	  if (getQueryString(debug)) {
+	  	parseJson(z);
 	  }
-	  $("header").attr("style","display:none;");
    });
 	</script>
   <!--[if IE]>
@@ -67,15 +85,9 @@
           </div>  
           <div class="mdl-card__supporting-text post-excerpt" style="font-family:'Microsoft YaHei', Helvetica, Arial, sans-serif;">
             <!-- list start -->
-            
-            <!-- Two Line List with secondary info and action -->
-            <style>
-            .demo-list-two {
-              width: 300px;
-            }
-            </style>
-
-            <ul class="demo-list-two mdl-list">
+		  
+		<ul class="mdl-list filelist">
+             <!--<ul class="demo-list-two mdl-list">
              <li class="mdl-list__item mdl-list__item--two-line">
                 <span class="mdl-list__item-primary-content">
                   <span style="color:black">Filename</span>
@@ -83,7 +95,9 @@
 		  <a class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab" style="background:#ffffff;box-shadow:none;" href="#"><i class="material-icons">cloud_download</i></a>
                 </span>
               </li>
-            </ul>
+            </ul>-->
+		</ul>
+
             <span id="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner"></span>
             <!-- list over -->
           </div>
