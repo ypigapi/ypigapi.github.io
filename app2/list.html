@@ -4,8 +4,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
   <title>list page</title>
   <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-  <script src="https://ypig.tk/styles/globalSettings.js"></script>
-  <script src="https://ypig.tk/styles/saveSvgAsPng.js"></script>
+  <!--<script src="https://ypig.tk/styles/globalSettings.js"></script>
+  <script src="https://ypig.tk/styles/saveSvgAsPng.js"></script>-->
   <script>
     function getQueryString(name) {
 	        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -71,22 +71,6 @@
     </div>
     <main class="mdl-layout__content">
       <div class="mdl-grid">
-        <!--<div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone" style="background-image:url('https://t.cn/E5lQLkz');webkit-background-size: cover;background-size: cover;">
-            </div>-->
-        <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="background-color:#ffffff">
-          <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text" style="font-family:'Microsoft YaHei', Helvetica, Arial, sans-serif;">简歌</h2>
-          </div>
-          <div class="mdl-card__supporting-text post-excerpt" style="font-family:'Microsoft YaHei', Helvetica, Arial, sans-serif;">
-            <form action="">
-              <span class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input id="keyword" autocomplete="off" type="text" name="search_keyword" class="mdl-textfield__input" />
-                <label class="mdl-textfield__label">搜索好听的歌曲吧......</label>
-              </span>
-              <button type="submit" style="margin-left:10px;background-color:#2196F3;" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--accent">搜索</button>
-            </form>
-          </div>
-        </div>
         <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone" style="background-color:#ffffff">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text" style="font-family:'Microsoft YaHei', Helvetica, Arial, sans-serif;">查找结果</h2>
@@ -108,9 +92,9 @@
                   <span>Bryan Cranston</span>
                   <span class="mdl-list__item-sub-title">62 Episodes</span>
                 </span>
-                <span class="mdl-list__item-secondary-content">
+                <span class="mdl-list__item-secondary-content" style="display:block;">
                   <span class="mdl-list__item-secondary-info">Actor</span>
-                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+                  <a class="mdl-list__item-secondary-action mdl-js-button mdl-js-ripple-effect" href="#"><i class="material-icons">cloud_download</i></a>
                 </span>
               </li>
             </ul>
