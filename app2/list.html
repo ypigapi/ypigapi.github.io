@@ -37,6 +37,7 @@
 		additem(filename, "约 " + Math.ceil(e[i].size / 1024 / 1024) + "MB",e[i].fs_id.toString());
 	    }
 	    $("#loading").removeClass("is-active");
+	    $(".filenames").text("文件列表");
 	    initallfunc();
     }
     function additem(filename,size,fs_id) {
