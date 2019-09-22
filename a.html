@@ -13,32 +13,9 @@ $headerSize = curl_getinfo($oCurl, CURLINFO_HEADER_SIZE);
 // 根据头大小去获取头信息内容
 $header = substr($sContent, 0, $headerSize);
 
-<?php
-    $curl = curl_init();
-
-    curl_setopt($curl, CURLOPT_URL, 'http://www.baidu.com');
-
-    curl_setopt($curl, CURLOPT_HEADER, 1);
-
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-
-    curl_setopt($curl, CURLOPT_POST, 1);
-
-    $post_data = array(
-        "action" => "login",
-        "task" => "login",
-        "ref" => "https://up.woozooo.com/",
-        "formhash" => "0af1aa15",
-        "username" => "13592086071",
-        "password" => "301563"
-        );
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
-
-    curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36');
-    //执行命令
-    $data = curl_exec($curl);
-    //关闭URL请求
-    curl_close($curl);
-    //显示获得的数据
-    print_r($data); 
-?>
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://www.ypigapi.tk/api/getuserid.php");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $output = curl_exec($ch);
+        curl_close($ch);
+        return $output;
