@@ -7,3 +7,34 @@ phpdisk_info=UWRSYAxmATxXZA9oDGQAU1o%2BBwxdNVUxATcIYVBkBjQEOFVhBmQMNwY1A1oINFI%2
 UM_distinctid=16cc837a685197-0b0f4020dfbb0a-7373e61-144000-16cc837a68637d; PHPSESSID=v7bm5liar6ufeiols9mrn5avuget9rff; phpdisk_info=VWBXZQFrBDlSYQBnWTFWBVQwBg0NZQJmUGYAaQI2CjhVaVBkAGIEP1VmD1ZcYFA8BjIAZg1kXG9XYAU2BGALOlVjV2cBNgQwUjEAZFk3Vm9UYQZmDWACYFA2ADICZwpuVWNQZQA3BG5VZg9nXA9QOwZlADcNbVw5V2QFbQQ0CzlVZldk; ylogin=1081172; CNZZDATA1253610888=112068174-1566724520-%7C1569150699; CNZZDATA1253610886=213237438-1566722761-https%253A%252F%252Fpc.woozooo.com%252F%7C1569154950
 
 $res=mb_convert_encoding($res, 'UTF-8', 'UTF-8,GBK,GB2312,BIG5');
+
+
+<?php
+    $curl = curl_init();
+
+    curl_setopt($curl, CURLOPT_URL, 'http://www.baidu.com');
+
+    curl_setopt($curl, CURLOPT_HEADER, 1);
+
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    curl_setopt($curl, CURLOPT_POST, 1);
+
+    $post_data = array(
+        "action" => "login",
+        "task" => "login",
+        "ref" => "https://up.woozooo.com/",
+        "formhash" => "0af1aa15",
+        "username" => "13592086071",
+        "password" => "301563"
+        );
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
+
+    curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36');
+    //执行命令
+    $data = curl_exec($curl);
+    //关闭URL请求
+    curl_close($curl);
+    //显示获得的数据
+    print_r($data); 
+?>
