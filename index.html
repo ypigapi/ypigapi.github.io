@@ -30,7 +30,7 @@
       <button onclick="location.reload();" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '刷新'}">
         <i class="mdui-icon material-icons">refresh</i>
       </button>
-      <button class="mdui-btn mdui-btn-icon no-func" mdui-tooltip="{content: '选项'}">
+      <button onclick="no_function_tip.open();" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '选项'}">
         <i class="mdui-icon material-icons">more_vert</i>
       </button>
     </div>
@@ -67,9 +67,20 @@
     </div>-->
   </main>
 
+  <div class="mdui-container">
+
+  <div class="mdui-dialog" id="no_function_dialog">
+    <div class="mdui-dialog-title">功能开发中</div>
+    <div class="mdui-dialog-content">稍后再来试试吧~</div>
+    <div class="mdui-dialog-actions">
+      <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>OK</button>
+    </div>
+  </div>
+
+</div>
 
   <script src="https://cdn.irow.top/mdui/0.4.3/js/mdui.min.js"></script>
-  <script src="./js/ajax.js"></script>
+  <script src="./js/initalize.js"></script>
 </body>
 
 </html>
