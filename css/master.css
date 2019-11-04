@@ -1,0 +1,32 @@
+.mdui-snackbar-text {
+  width: 100%;
+}
+
+.mdui-theme-primary-indigo .mdui-color-theme {
+    color: #fff!important;
+    background-color: #f45a8d!important;
+
+.mdui-theme-primary-indigo .mdui-color-theme-400 {
+    color: #fff!important;
+    background-color: #f45a8d!important;
+	
+main {
+  max-width: 760px !important;
+}
+
+main .mdui-row [class*=mdui-col-] {
+  padding-top: 8px;
+  padding-bottom: 28px;
+}
+
+#select>div {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 56px;
+}

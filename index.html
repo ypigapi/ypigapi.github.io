@@ -1,15 +1,78 @@
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
-        <title>Hi</title>
-        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    </head>
-    <body>
-        <link rel='stylesheet prefetch' href='https://ypig.tk/styles/material.indigo-pink.min.css'>
-        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-        <script src='https://ypig.tk/styles/material.min.js'></script>
-        <center>
-            这里是小猪猪的API服务
-        </center>
-    </body>
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+
+  <title>PigVpn</title>
+
+  <!--<link rel="icon" href="favicon" type="image/x-icon">-->
+
+  <link rel="stylesheet" href="./css/mdui.min.css">
+</head>
+
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-light mdui-drawer-body-left mdui-appbar-with-toolbar mdui-bottom-nav-fixed">
+
+  <header class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar mdui-color-theme">
+      <button type="button" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+        <i class="mdui-icon material-icons">menu</i>
+      </button>
+
+      <a style="display:none;" class="mdui-typo-headline mdui-hidden-xs">大标题</a>
+
+      <div class="mdui-typo-title">PigVpn</div>
+
+      <div class="mdui-toolbar-spacer"></div>
+      <!--<button class="mdui-btn mdui-btn-icon no-func" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></button>-->
+      <button onclick="location.reload();" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '刷新'}">
+        <i class="mdui-icon material-icons">refresh</i>
+      </button>
+      <button class="mdui-btn mdui-btn-icon no-func" mdui-tooltip="{content: '选项'}">
+        <i class="mdui-icon material-icons">more_vert</i>
+      </button>
+    </div>
+  </header>
+  <aside class="mdui-drawer mdui-list" id="left-drawer">
+      <a href="./" class="mdui-list-item mdui-list-item-active mdui-ripple" target="_top"><i class="mdui-list-item-icon mdui-icon material-icons">home</i><span class="mdui-list-item-content">首页</span></a>
+
+      <a href="https://ypig.github.io/api/sendFeedBack.html" class="mdui-list-item mdui-ripple" target="_blank"><i class="mdui-list-item-icon mdui-icon material-icons">chat</i><span class="mdui-list-item-content">问题反馈</span></a>
+
+    </aside>
+  <main class="mdui-container mdui-p-y-4">
+    <div class="mdui-panel mdui-typo" mdui-panel>
+      <div class="mdui-panel-item mdui-panel-item-open">
+        <div class="mdui-panel-item-header">
+          <h3>使用说明</h3>
+        </div>
+        <div class="mdui-panel-item-body">
+          <p>本站目前仅支持<a href="https://588ku.com/" title="千库网" target="_blank">千库网</a>素材直链下载</p>
+          <p>将你要下载的素材链接填入下方方框中并点击下载，就能获得下载链接</p>
+          <p>每天下载次数有限，如果显示下载次数上限了，可以第二天早点来下载</p>
+		  <p>by bilibili <a href="https://space.bilibili.com/355414907">小酱友</a></p>
+        </div>
+      </div>
+    </div>
+    <!--<div class="mdui-row mdui-center mdui-p-y-4 ">
+      <div class="mdui-row mdui-col-sm-10">
+        <div class="mdui-textfield mdui-col-xs-7 mdui-col-sm-8">
+          <input id="target" class="mdui-textfield-input" type="url" placeholder="Search something...">
+        </div>
+      </div>
+      <div class="mdui-row mdui-col-sm-2">
+        <button id="get" class="mdui-center mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-400">
+          <i class="mdui-icon material-icons">&#xe2c4;</i>
+          <span>GO</span>
+        </button>
+      </div>
+    </div>-->
+  </main>
+
+
+  <script src="https://cdn.irow.top/mdui/0.4.3/js/mdui.min.js"></script>
+  <script src="./js/ajax.js"></script>
+</body>
+
 </html>
