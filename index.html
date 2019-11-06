@@ -31,9 +31,14 @@
       <button onclick="location.reload();" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '刷新'}">
         <i class="mdui-icon material-icons">refresh</i>
       </button>
-      <button onclick="no_function_tip.open();" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '选项'}">
+      <button  class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '选项'}" id="open_menu">
         <i class="mdui-icon material-icons">more_vert</i>
       </button>
+      <ul class="mdui-menu" id="menu">
+        <li class="mdui-menu-item">
+          <a onclick="no_function_tip.open();" href="javascript:void;" class="mdui-ripple">帮助</a>
+        </li>
+      </ul>
     </div>
   </header>
   <aside class="mdui-drawer mdui-list" id="left-drawer">
@@ -70,6 +75,9 @@
 
   <div class="mdui-container">
 
+
+  <!-- hiding objects-->
+
   <div class="mdui-dialog" id="no_function_dialog">
     <div class="mdui-dialog-title">功能开发中</div>
     <div class="mdui-dialog-content">稍后再来试试吧~</div>
@@ -79,6 +87,7 @@
   </div>
 
 </div>
+
 
   <script src="https://cdn.irow.top/mdui/0.4.3/js/mdui.min.js"></script>
   <script src="./js/initalize.js"></script>
