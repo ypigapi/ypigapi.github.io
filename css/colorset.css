@@ -1,15 +1,19 @@
+/* material pink:#2196F3
+   this file is used to change the normal color set.
+   */
+
 .mdui-snackbar-text {
   width: 100%;
 }
 
 .mdui-theme-primary-indigo .mdui-color-theme {
     color: #fff!important;
-    background-color: #f45a8d!important;
+    background-color: #2196F3!important;
 
 .mdui-theme-primary-indigo .mdui-color-theme-400 {
     color: #fff!important;
-    background-color: #f45a8d!important;
-	
+    background-color: #2196F3!important;
+
 main {
   max-width: 760px !important;
 }
