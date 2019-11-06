@@ -12,6 +12,24 @@
 
   <link rel="stylesheet" href="./css/mdui.min.css">
   <link rel="stylesheet" href="./css/colorset.css">
+
+  <script src="./js/b6.js"></script>
+
+  <script>
+  /* libraries */
+  function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var url = decodeURI(decodeURI(window.location.search))
+    var r = url.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+  }
+  </script>
+
+  <script>
+  /* disable caching */
+    (function(){if (getQueryString("stamp") == null) {location.href = location.origin + location.pathname + "?stamp=" + new Base64().encode(new Date().getTime().toString()).replace("==","").toLowerCase();}})();
+  </script>
 </head>
 
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-light mdui-drawer-body-left mdui-appbar-with-toolbar mdui-bottom-nav-fixed">
