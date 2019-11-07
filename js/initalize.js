@@ -6,3 +6,4 @@ document.getElementById('open_menu').addEventListener('click', function () {
   menulist.open();
 });
 mdui.mutation();
+new ClipboardJS('.btn');
