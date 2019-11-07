@@ -30,7 +30,7 @@
 
   <script>
   /* disable caching */
-    (function(){if (getQueryString("stamp") == null || new Date().getTime() - Number(new Base64().decode(getQueryString("stamp")))  > 20000 ) {location.href = location.origin + location.pathname + "?stamp=" + new Base64().encode(new Date().getTime().toString());}})();
+    (function(){if (getQueryString("stamp") == null || new Date().getTime() - Number(new Base64().decode(getQueryString("stamp")))  > 50000 ) {location.href = location.origin + location.pathname + "?stamp=" + new Base64().encode(new Date().getTime().toString());}})();
   </script>
 </head>
 
