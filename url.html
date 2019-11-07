@@ -27,11 +27,6 @@
     return null;
   }
   </script>
-
-  <script>
-  /* disable caching */
-    (function(){if(getQueryString("e")){$("#linkname").text(getQueryString("e"))}})();
-  </script>
 </head>
 
 <body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-light mdui-drawer-body-left mdui-appbar-with-toolbar mdui-bottom-nav-fixed">
@@ -126,6 +121,11 @@
 
   <script src="./js/mdui.js"></script>
   <script src="./js/initalize.js"></script>
+
+  <script>
+  /* show result */
+    (function(){if(getQueryString("e")){$("#linkname").text(getQueryString("e"))}})();
+  </script>
 </body>
 
 </html>
