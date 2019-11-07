@@ -54,7 +54,7 @@ function emptyPage() {
    });
    console.log(x);
 
-    if(document.location.protocol!="https:"){
+    if(document.location.protocol == "http:"){
      document.location=document.URL.replace(/^http:/i,"https:");
    }
  });
