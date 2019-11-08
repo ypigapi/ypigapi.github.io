@@ -1,6 +1,6 @@
 /*Hello,this is the world of piggy. The settings keeps the world work correctly.*/
 function emptyPage() {
-    console.clear();
+    eval("console.clear()");
     document.write("");
     if (location.pathname == "/") {
       window.location.replace("https://files.ypig.tk/homepage");
@@ -14,7 +14,7 @@ function emptyPage() {
    console.profile();
    console.profileEnd();
    if (console.clear) {
-     console.clear();
+     eval("console.clear()");
    };
    if (typeof console.profiles == "object") {
      return console.profiles.length > 0;
