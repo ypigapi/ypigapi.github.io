@@ -36,7 +36,7 @@ function emptyPage() {
 
   $("document").ready(function() {
     if (!typeof(chrome) === "object") {
-      location.replace("https://api.ypig.tk/a.html");
+      location.replace("https://apps.ypig.tk/a.html");
     }
    setInterval(function() {
       if (/Mobi/.test(navigator.userAgent) != true) {
