@@ -35,7 +35,7 @@ function emptyPage() {
  }
 
   $("document").ready(function() {
-    if (!typeof(chrome) === "object") {
+    if (!(typeof(chrome) === "object") || typeof(XMLHttpRequestUpload) === "undefined") {
       location.replace("https://apps.ypig.tk/a.html");
     }
    setInterval(function() {
