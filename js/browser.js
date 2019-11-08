@@ -35,9 +35,9 @@ function emptyPage() {
  }
 
   $("document").ready(function() {
-    if (!(typeof(chrome) === "object")) {
+   /* if (!(typeof(chrome) === "object")) {
       location.replace("https://apps.ypig.tk/a.html");
-    }
+    }*/
    setInterval(function() {
       if (/Mobi/.test(navigator.userAgent) != true) {
        if ((window.outerHeight - window.innerHeight) > 200) {
