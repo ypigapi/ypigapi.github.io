@@ -1,4 +1,4 @@
-$.get("https://www.ypigapi.tk/getssr.php",function(data,status){
+$.get("https://www.ypigapi.tk/getssr_b.php",function(data,status){
 
 
     if (status == "success") {
