@@ -100,6 +100,18 @@
               </li>
               -->
           </ul>
+          <div id="card_validate">
+            <div class="mdui-textfield mdui-textfield-floating-label" id="card_textfield">
+              <i class="mdui-icon material-icons">card_membership</i>
+              <label class="mdui-textfield-label">你的卡号</label>
+              <input class="mdui-textfield-input" type="text" maxlength="47" id="card_number"></input>
+              <div class="mdui-textfield-helper" id="card_helper">卡号是用于验证您是否购买PigLinker查看权限。一个卡号的有效时间通常为自出库起1小时左右。</div>
+            </div>
+          <div class="mdui-container" style="display:block;">
+            <div class="mdui-col-xs-12" />
+            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-col-xs-1" id="validate">验证</button>
+          </div>
+
         </div>
       </div>
     </div>
@@ -145,48 +157,25 @@
 
   </div>
 
-  <div class="mdui-container">
-
-    <div class="mdui-dialog" id="check_vip_dialog">
-      <div class="mdui-dialog-content">
-        <div class="mdui-textfield mdui-textfield-floating-label" id="card_textfield">
-          <i class="mdui-icon material-icons">card_membership</i>
-          <label class="mdui-textfield-label">你的卡号</label>
-          <input class="mdui-textfield-input" type="text" maxlength="47" id="card_number"></input>
-          <div class="mdui-textfield-helper" id="card_helper">卡号是用于验证您是否购买PigLinker查看权限。一个卡号的有效时间通常为自出库起1小时左右。</div>
-        </div>
-      </div>
-      <div class="mdui-dialog-actions">
-        <button class="mdui-btn mdui-ripple" style="color:#3F51B5;" mdui-dialog-confirm>OK</button>
-      </div>
-    </div>
-
-  </div>
-
-
-
   <script src="./js/mdui.js"></script>
   <script src="./js/initalize.js"></script>
   <script src="./js/protect.js"></script>
   <script>
     /* check vip module */
-    document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function() {
+    $("#validate").click(function() {
       setTimeout(function() {
         var usertext = $("#card_number").val().replace(/\s+/g, "");
         if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g, "").substr(5, 32)).substr(0, 5).toLowerCase() == usertext.split("-")[0].substr(0, 5).toLowerCase()) {
           eval("console.log($(\"#card_number\").val());");
+          $("#card_validate").fadeOut();
           $("#link_list_load").fadeIn();
           loadurls(usertext.replace(/-/g, "").substr(5, 32));
         } else {
-            mdui.snackbar({
-              message: '卡号无效'
-            });
+          mdui.snackbar({
+            message: '卡号无效'
+          });
         }
-     },0);
-    });
-
-    document.body.addEventListener('onload', function(event) { //DOMContentLoaded
-      check_vip_tip.open();
+      }, 0);
     });
   </script>
 </body>
