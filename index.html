@@ -177,11 +177,9 @@
         $("#link_list_load").fadeIn();
         loadurls(usertext.replace(/-/g, "").substr(5, 32));
       } else {
-        setTimeout(function() {
           mdui.snackbar({
             message: '卡号无效'
           });
-        }, 200);
       }
     });
 
