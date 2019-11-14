@@ -173,7 +173,6 @@
     document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function () {
       // ABCDE - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XX
       if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g,"").substr(5,32)).substr(0,5).toLowerCase() == usertext.split("-")[0].substr(0,5).toLowerCase()) {
-        document.cookie="auth=" + usertext;
         eval("console.log($(\"#card_number\").val());");
         loadurls(usertext.replace(/-/g,"").substr(5,32));
       } else {
