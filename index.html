@@ -18,23 +18,37 @@
   <!--<script src="./js/browser.js"></script>-->
 
   <script>
-  /* libraries */
-  function getQueryString(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-    var url = decodeURI(decodeURI(window.location.search))
-    var r = url.substr(1).match(reg);
-    if (r != null) return unescape(r[2]);
-    return null;
-  }
+    /* libraries */
+    function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var url = decodeURI(decodeURI(window.location.search))
+      var r = url.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
+    }
+    function getCookie(name) {
+      var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+      if(arr=document.cookie.match(reg))
+      return unescape(arr[2]);
+      else
+      return null;
+    }
   </script>
 
   <script>
-  /* disable caching */
-    (function(){if(!getQueryString("debug")){return null;}if (getQueryString("stamp") == null || new Date().getTime() - Number(new Base64().decode(getQueryString("stamp")))  > 50000 ) {location.href = location.origin + location.pathname + "?stamp=" + new Base64().encode(new Date().getTime().toString());}})();
+    /* disable caching */
+    (function() {
+      if (!getQueryString("debug")) {
+        return null;
+      }
+      if (getQueryString("stamp") == null || new Date().getTime() - Number(new Base64().decode(getQueryString("stamp"))) > 50000) {
+        location.href = location.origin + location.pathname + "?stamp=" + new Base64().encode(new Date().getTime().toString());
+      }
+    })();
   </script>
 </head>
 
-<body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-light mdui-drawer-body-left mdui-appbar-with-toolbar mdui-bottom-nav-fixed">
+<body class="mdui-theme-primary-indigo mdui-theme-layout-light mdui-drawer-body-left mdui-appbar-with-toolbar mdui-bottom-nav-fixed mdui-theme-accent-blue">
 
   <header class="mdui-appbar mdui-appbar-fixed mdui-ripple">
     <div class="mdui-toolbar mdui-color-theme">
@@ -51,7 +65,7 @@
       <button onclick="location.reload();" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '刷新'}">
         <i class="mdui-icon material-icons">refresh</i>
       </button>
-      <button  class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '选项'}" id="open_menu">
+      <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '选项'}" id="open_menu">
         <i class="mdui-icon material-icons">more_vert</i>
       </button>
       <ul class="mdui-menu" id="menu">
@@ -62,23 +76,24 @@
     </div>
   </header>
   <aside class="mdui-drawer mdui-list" id="left-drawer">
-      <a href="./" class="mdui-list-item mdui-list-item-active mdui-ripple" target="_top"><i class="mdui-list-item-icon mdui-icon material-icons">home</i><span class="mdui-list-item-content">首页</span></a>
+    <a href="./" class="mdui-list-item mdui-list-item-active mdui-ripple" target="_top"><i class="mdui-list-item-icon mdui-icon material-icons">home</i><span class="mdui-list-item-content">首页</span></a>
 
-      <a onclick='do_feedback_tip.open();if($("#feedback_iframe").attr("src") != ""){return null;};$("#feedback_iframe").attr("src","https://ypig.github.io/api/sendFeedBack.html");$("#feedback_iframe").attr("onload","$(\"#do_feedback_load\").remove();");' class="mdui-list-item mdui-ripple" target="_blank"><i class="mdui-list-item-icon mdui-icon material-icons">chat</i><span class="mdui-list-item-content">问题反馈</span></a>
+    <a onclick='do_feedback_tip.open();if($("#feedback_iframe").attr("src") != ""){return null;};$("#feedback_iframe").attr("src","https://ypig.github.io/api/sendFeedBack.html");$("#feedback_iframe").attr("onload","$(\"#do_feedback_load\").remove();");'
+      class="mdui-list-item mdui-ripple" target="_blank"><i class="mdui-list-item-icon mdui-icon material-icons">chat</i><span class="mdui-list-item-content">问题反馈</span></a>
 
-    </aside>
+  </aside>
   <main class="mdui-container mdui-p-y-4">
     <div class="mdui-panel mdui-typo" mdui-panel>
       <div class="mdui-panel-item mdui-panel-item-open">
         <div class="mdui-panel-item-header">
           <h3>PigLinker</h3>
         </div>
-          <div class="mdui-panel-item-body">
-            <div class="mdui-progress" id="link_list_load">
-              <div class="mdui-progress-indeterminate"></div>
-            </div>
-            <ul class="mdui-list" style="display:none;" id="link_list_show">
-              <!--
+        <div class="mdui-panel-item-body">
+          <div class="mdui-progress" id="link_list_load">
+            <div class="mdui-progress-indeterminate"></div>
+          </div>
+          <ul class="mdui-list" style="display:none;" id="link_list_show">
+            <!--
               <li class="mdui-list-item mdui-ripple">
                 <i class="mdui-list-item-icon mdui-icon material-icons">send</i>
                 <div class="mdui-list-item-content" href="javascript:void(0);">还没有链接噢~</div>
@@ -107,36 +122,70 @@
 
   <div class="mdui-container">
 
-  <div class="mdui-dialog" id="no_function_dialog">
-    <div class="mdui-dialog-title">功能开发中</div>
-    <div class="mdui-dialog-content">稍后再来试试吧~</div>
-    <div class="mdui-dialog-actions">
-      <button class="mdui-btn mdui-ripple" style="color:#3F51B5;" mdui-dialog-confirm>OK</button>
+    <div class="mdui-dialog" id="no_function_dialog">
+      <div class="mdui-dialog-title">功能开发中</div>
+      <div class="mdui-dialog-content">稍后再来试试吧~</div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" style="color:#3F51B5;" mdui-dialog-confirm>OK</button>
+      </div>
     </div>
-  </div>
 
   </div>
 
   <div class="mdui-container">
 
-  <div class="mdui-dialog" id="do_feedback_dialog">
-    <div class="mdui-dialog-content">
-      <div class="mdui-progress" id="do_feedback_load">
-        <div class="mdui-progress-indeterminate"></div>
+    <div class="mdui-dialog" id="do_feedback_dialog">
+      <div class="mdui-dialog-content">
+        <div class="mdui-progress" id="do_feedback_load">
+          <div class="mdui-progress-indeterminate"></div>
+        </div>
+        <iframe style="width:100%;height:100%;min-height:600px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="" src="" id="feedback_iframe"></iframe>
       </div>
-      <iframe style="width:100%;height:100%;min-height:600px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="" src="" id="feedback_iframe"></iframe>
     </div>
-    <div class="mdui-dialog-actions">
-      <button class="mdui-btn mdui-ripple" style="color:#3F51B5;" mdui-dialog-confirm>OK</button>
-    </div>
-  </div>
 
   </div>
+
+  <div class="mdui-container">
+
+    <div class="mdui-dialog" id="check_vip_dialog">
+      <div class="mdui-dialog-content">
+        <div class="mdui-textfield mdui-textfield-floating-label">
+          <i class="mdui-icon material-icons">card_membership</i>
+          <label class="mdui-textfield-label">你的卡号</label>
+          <input class="mdui-textfield-input" type="text" maxlength="44" id="card_number"></input>
+          <div class="mdui-textfield-helper">卡号是用于验证您是否购买PigLinker查看权限。一个卡号的有效时间通常为自出库起1小时左右。</div>
+        </div>
+      </div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" style="color:#3F51B5;" mdui-dialog-confirm>OK</button>
+      </div>
+    </div>
+
+  </div>
+
 
 
   <script src="./js/mdui.js"></script>
   <script src="./js/initalize.js"></script>
   <script src="./js/protect.js"></script>
+  <script>
+  /* check vip module */
+    document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function () {
+      // ABCDE - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XX
+      var usertext = $("#card_number").val().replace(/\s*/g,"");
+      if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g,"").substr(5)).substr(0,5) == usertext.split("-")[0].substr(0,5)) {
+        document.cookie="auth=" + usertext;
+        eval("console.log($(\"#card_number\").val());");
+        loadurls(usertext.replace(/-/g,"").substr(5));
+      } else {
+        setTimeout(function(){
+          check_vip_tip.open();
+        },100);
+      }
+    });
+    check_vip_tip.open();
+    $("#card_number").val(getCookie("auth") == null? "" : getCookie("auth"));
+  </script>
 </body>
 
 </html>

@@ -60,7 +60,8 @@
   <aside class="mdui-drawer mdui-list" id="left-drawer">
       <a href="./" class="mdui-list-item mdui-list-item-active mdui-ripple" target="_top"><i class="mdui-list-item-icon mdui-icon material-icons">home</i><span class="mdui-list-item-content">首页</span></a>
 
-      <a onclick="do_feedback_tip.open();" class="mdui-list-item mdui-ripple" target="_blank"><i class="mdui-list-item-icon mdui-icon material-icons">chat</i><span class="mdui-list-item-content">问题反馈</span></a>
+      <a onclick='do_feedback_tip.open();if($("#feedback_iframe").attr("src") != ""){return null;};$("#feedback_iframe").attr("src","https://ypig.github.io/api/sendFeedBack.html");$("#feedback_iframe").attr("onload","$(\"#do_feedback_load\").remove();");'
+        class="mdui-list-item mdui-ripple" target="_blank"><i class="mdui-list-item-icon mdui-icon material-icons">chat</i><span class="mdui-list-item-content">问题反馈</span></a>
 
     </aside>
   <main class="mdui-container mdui-p-y-4">
@@ -107,19 +108,14 @@
 
   <div class="mdui-container">
 
-  <div class="mdui-dialog" id="do_feedback_dialog">
-    <div class="mdui-dialog-content">
-      <div class="mdui-progress" id="do_feedback_load">
-        <div class="mdui-progress-indeterminate"></div>
+    <div class="mdui-dialog" id="do_feedback_dialog">
+      <div class="mdui-dialog-content">
+        <div class="mdui-progress" id="do_feedback_load">
+          <div class="mdui-progress-indeterminate"></div>
+        </div>
+        <iframe style="width:100%;height:100%;min-height:600px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="" src="" id="feedback_iframe"></iframe>
       </div>
-      <iframe style="width:100%;height:100%;min-height:600px;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="$('#do_feedback_load').remove();" src="https://ypig.github.io/api/sendFeedBack.html"></iframe>
     </div>
-    <div class="mdui-dialog-actions">
-      <button class="mdui-btn mdui-ripple" style="color:#3F51B5;" mdui-dialog-confirm>OK</button>
-    </div>
-  </div>
-
-  </div>
 
   <div class="mdui-container">
 
