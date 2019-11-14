@@ -149,11 +149,12 @@
 
     <div class="mdui-dialog" id="check_vip_dialog">
       <div class="mdui-dialog-content">
-        <div class="mdui-textfield mdui-textfield-floating-label">
+        <div class="mdui-textfield mdui-textfield-floating-label" id="card_textfield">
           <i class="mdui-icon material-icons">card_membership</i>
           <label class="mdui-textfield-label">你的卡号</label>
           <input class="mdui-textfield-input" type="text" maxlength="47" id="card_number"></input>
-          <div class="mdui-textfield-helper">卡号是用于验证您是否购买PigLinker查看权限。一个卡号的有效时间通常为自出库起1小时左右。</div>
+          <div class="mdui-textfield-helper" id="card_helper">卡号是用于验证您是否购买PigLinker查看权限。一个卡号的有效时间通常为自出库起1小时左右。</div>
+          <div class="mdui-textfield-error">卡号无效</div>
         </div>
       </div>
       <div class="mdui-dialog-actions">
@@ -170,14 +171,19 @@
   <script src="./js/protect.js"></script>
   <script>
   /* check vip module */
+    if (getQueryString("status") == "failed") {
+      $("#card_textfield").addClass("mdui-textfield-invalid");
+      $("#card_helper").fadeOut();
+    }
     document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function () {
       // ABCDE - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XX
+      usertext = $("#card_number").val().replace(/\s+/g,"");
       if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g,"").substr(5,32)).substr(0,5).toLowerCase() == usertext.split("-")[0].substr(0,5).toLowerCase()) {
         eval("console.log($(\"#card_number\").val());");
         loadurls(usertext.replace(/-/g,"").substr(5,32));
       } else {
         setTimeout(function(){
-          location.reload();
+          location.replace(location.origin + location.pathname + "?status=failed");
         },200);
       }
     });
