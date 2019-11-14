@@ -176,13 +176,7 @@
     }
     document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function () {
       // ABCDE - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XX
-      var usertext = $("#card_number").val().replace(/\s+/g,"");
-      if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g,"").substr(5,32)).substr(0,5).toLowerCase() == usertext.split("-")[0].substr(0,5).toLowerCase()) {
-        eval("console.log($(\"#card_number\").val());");
-        loadurls(usertext.replace(/-/g,"").substr(5,32));
-      } else {
-
-      }
+      
     });
     check_vip_tip.open();
   </script>
