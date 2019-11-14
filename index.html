@@ -152,7 +152,7 @@
         <div class="mdui-textfield mdui-textfield-floating-label">
           <i class="mdui-icon material-icons">card_membership</i>
           <label class="mdui-textfield-label">你的卡号</label>
-          <input class="mdui-textfield-input" type="text" maxlength="44" id="card_number"></input>
+          <input class="mdui-textfield-input" type="text" maxlength="47" id="card_number"></input>
           <div class="mdui-textfield-helper">卡号是用于验证您是否购买PigLinker查看权限。一个卡号的有效时间通常为自出库起1小时左右。</div>
         </div>
       </div>
@@ -173,10 +173,10 @@
     document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function () {
       // ABCDE - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XX
       var usertext = $("#card_number").val().replace(/\s*/g,"");
-      if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g,"").substr(5)).substr(0,5).toLowerCase() == usertext.split("-")[0].substr(0,5).toLowerCase()) {
+      if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g,"").substr(5,32)).substr(0,5).toLowerCase() == usertext.split("-")[0].substr(0,5).toLowerCase()) {
         document.cookie="auth=" + usertext;
         eval("console.log($(\"#card_number\").val());");
-        loadurls(usertext.replace(/-/g,"").substr(5));
+        loadurls(usertext.replace(/-/g,"").substr(5,32));
       } else {
         setTimeout(function(){
           check_vip_tip.open();
