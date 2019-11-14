@@ -25,12 +25,13 @@
       if (r != null) return unescape(r[2]);
       return null;
     }
+
     function getCookie(name) {
-      var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-      if(arr=document.cookie.match(reg))
-      return unescape(arr[2]);
+      var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+      if (arr = document.cookie.match(reg))
+        return unescape(arr[2]);
       else
-      return null;
+        return null;
     }
   </script>
 
@@ -169,21 +170,24 @@
   <script src="./js/initalize.js"></script>
   <script src="./js/protect.js"></script>
   <script>
-  /* check vip module */
+    /* check vip module */
     if (getQueryString("status") == "failed") {
       $("#card_textfield").addClass("mdui-textfield-invalid");
+      setTimeout(function() {
+        $("#card_textfield").removeClass("mdui-textfield-invalid");
+      }, 2000);
       $("#card_helper").fadeOut();
     }
-    document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function () {
-      // ABCDE - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XXXXX - XX
-      var usertext = $("#card_number").val().replace(/\s+/g,"");
-      if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g,"").substr(5,32)).substr(0,5).toLowerCase() == usertext.split("-")[0].substr(0,5).toLowerCase()) {
+    document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function() {
+      ("#card_textfield").removeClass("mdui-textfield-invalid");
+      var usertext = $("#card_number").val().replace(/\s+/g, "");
+      if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g, "").substr(5, 32)).substr(0, 5).toLowerCase() == usertext.split("-")[0].substr(0, 5).toLowerCase()) {
         eval("console.log($(\"#card_number\").val());");
-        loadurls(usertext.replace(/-/g,"").substr(5,32));
+        loadurls(usertext.replace(/-/g, "").substr(5, 32));
       } else {
-        setTimeout(function(){
+        setTimeout(function() {
           location.replace(location.origin + location.pathname + "?status=failed");
-        },200);
+        }, 200);
       }
     });
 
