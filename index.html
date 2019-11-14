@@ -15,7 +15,9 @@
 
   <script src="./js/b6.js"></script>
   <script src="./js/jquery.min.js"></script>
+  <!--
   <script src="./js/browser.js"></script>
+-->
 
   <script>
   /* libraries */
@@ -30,7 +32,7 @@
 
   <script>
   /* disable caching */
-    (function(){if (getQueryString("stamp") == null || new Date().getTime() - Number(new Base64().decode(getQueryString("stamp")))  > 50000 ) {location.href = location.origin + location.pathname + "?stamp=" + new Base64().encode(new Date().getTime().toString());}})();
+    (function(){if(!getQueryString("debug")){return null;}if (getQueryString("stamp") == null || new Date().getTime() - Number(new Base64().decode(getQueryString("stamp")))  > 50000 ) {location.href = location.origin + location.pathname + "?stamp=" + new Base64().encode(new Date().getTime().toString());}})();
   </script>
 </head>
 
@@ -44,7 +46,7 @@
 
       <a style="display:none;" class="mdui-typo-headline mdui-hidden-xs">大标题</a>
 
-      <div class="mdui-typo-title">PigVpn</div>
+      <div class="mdui-typo-title">PigLinker</div>
 
       <div class="mdui-toolbar-spacer"></div>
       <!--<button class="mdui-btn mdui-btn-icon no-func" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></button>-->
@@ -77,7 +79,7 @@
             <div class="mdui-progress" id="link_list_load">
               <div class="mdui-progress-indeterminate"></div>
             </div>
-            <ul class="mdui-list" id="link_list_show">
+            <ul class="mdui-list" style="display:none;" id="link_list_show">
               <!--
               <li class="mdui-list-item mdui-ripple">
                 <i class="mdui-list-item-icon mdui-icon material-icons">send</i>
