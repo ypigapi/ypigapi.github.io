@@ -171,16 +171,18 @@
   <script>
     /* check vip module */
     document.getElementById('check_vip_dialog').addEventListener('closed.mdui.dialog', function() {
-      var usertext = $("#card_number").val().replace(/\s+/g, "");
-      if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g, "").substr(5, 32)).substr(0, 5).toLowerCase() == usertext.split("-")[0].substr(0, 5).toLowerCase()) {
-        eval("console.log($(\"#card_number\").val());");
-        $("#link_list_load").fadeIn();
-        loadurls(usertext.replace(/-/g, "").substr(5, 32));
-      } else {
-          mdui.snackbar({
-            message: '卡号无效'
-          });
-      }
+      setTimeout() {function() {
+        var usertext = $("#card_number").val().replace(/\s+/g, "");
+        if (usertext.length > 10 && new Base64().encode(usertext.replace(/-/g, "").substr(5, 32)).substr(0, 5).toLowerCase() == usertext.split("-")[0].substr(0, 5).toLowerCase()) {
+          eval("console.log($(\"#card_number\").val());");
+          $("#link_list_load").fadeIn();
+          loadurls(usertext.replace(/-/g, "").substr(5, 32));
+        } else {
+            mdui.snackbar({
+              message: '卡号无效'
+            });
+        }
+     },0);
     });
 
     document.addEventListener('DOMContentLoaded', function(event) {
