@@ -181,9 +181,7 @@
         eval("console.log($(\"#card_number\").val());");
         loadurls(usertext.replace(/-/g,"").substr(5,32));
       } else {
-        setTimeout(function(){
-          location.replace(location.origin + location.pathname + "?status=failed");
-        },200);
+
       }
     });
     check_vip_tip.open();
