@@ -20,6 +20,9 @@ function loadurls(auth) {
           link_list[i] = links.links[i];
         }
         for  (var j = 0; j < links.name.length; j++) {
+            if (links.name[j] == "") {
+              $('<li class="mdui-list-item mdui-ripple"><i class="mdui-list-item-icon mdui-icon material-icons">send</i><div class="mdui-list-item-content" href="javascript:void(0);" onclick="javascript:void(0);"</div></li>').appendTo("#link_list_show");
+            }
             $('<li class="mdui-list-item mdui-ripple"><i class="mdui-list-item-icon mdui-icon material-icons">send</i><div class="mdui-list-item-content" href="javascript:void(0);" onclick="location.href=\'https://apps.ypig.tk/p/'+ link_list[j] +'\'">' + links.name[j] + '</div></li>').appendTo("#link_list_show");
         }
         $("#link_list_show").fadeIn();
