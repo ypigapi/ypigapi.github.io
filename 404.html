@@ -17,18 +17,17 @@
         <script>
 
           if (location.pathname.substring(3) == "") {
+
             history.back();
-            return;
-          }
 
-          if (location.pathname.substring(3) == "undefined") {
+          } else if (location.pathname.substring(3) == "undefined") {
+
             $("#container_iframe").attr("src","https://apps.ypig.tk/url.html?e=该链接所属服务器没有响应");
-            return;
-          }
 
-          if (location.pathname.substring(0,3) == "/p/") {
+          } else if (location.pathname.substring(0,3) == "/p/") {
+
             $("#container_iframe").attr("src","https://apps.ypig.tk/url.html?e=" + location.pathname.substring(3));
-            return;
+            
           }
 
           $("#tip").text("找不到该页面");
