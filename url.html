@@ -59,7 +59,7 @@
   <aside class="mdui-drawer mdui-list" id="left-drawer">
       <a href="./" class="mdui-list-item mdui-list-item-active mdui-ripple" target="_top"><i class="mdui-list-item-icon mdui-icon material-icons">home</i><span class="mdui-list-item-content">首页</span></a>
 
-      <a onclick='do_feedback_tip.open();if($("#feedback_iframe").attr("src") != ""){return null;};$("#feedback_iframe").attr("src","https://ypig.github.io/api/sendFeedBack.html");$("#feedback_iframe").attr("onload","$(\"#do_feedback_load\").remove();");'
+      <a onclick='do_feedback_tip.open();if($("#feedback_iframe").attr("src") != ""){return null;};$("#feedback_iframe").attr("src","https://ypig.github.io/api/sendFeedBack.html");$("#feedback_iframe").attr("onload","$(\"#do_feedback_load\").fadeOut();");'
         class="mdui-list-item mdui-ripple" target="_blank"><i class="mdui-list-item-icon mdui-icon material-icons">chat</i><span class="mdui-list-item-content">问题反馈</span></a>
 
     </aside>
