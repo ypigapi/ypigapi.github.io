@@ -4,6 +4,9 @@
         <title>PigLinker</title>
         <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
         <script>
+        if (location.pathname.substring(3) == "") {
+          history.back();
+        }
         if (location.pathname.substring(0,3) == "/p/") {
           location.replace("https://apps.ypig.tk/url.html?e=" + location.pathname.substring(3));
         }
@@ -13,8 +16,8 @@
         <link rel='stylesheet prefetch' href='https://ypig.tk/styles/material.indigo-pink.min.css'>
         <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
         <script src='https://ypig.tk/styles/material.min.js'></script>
-        <center>
-            找不到该页面
-        </center>
+        <p style="align:center;">
+            请稍等
+        </p>
     </body>
 </html>
