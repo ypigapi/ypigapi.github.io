@@ -27,11 +27,14 @@
           } else if (location.pathname.substring(0,3) == "/p/") {
 
             $("#container_iframe").attr("src","https://apps.ypig.tk/url.html?e=" + location.pathname.substring(3));
+
+          } else {
+
+            $("#tip").text("找不到该页面");
+            $("#tip").attr("style","align:center;display:none;");
+            $("#tip").fadeIn();
             
           }
-
-          $("#tip").text("找不到该页面");
-          $("#tip").attr("style","align:center;");
         </script>
     </body>
 </html>
