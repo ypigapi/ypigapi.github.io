@@ -5,19 +5,16 @@
         <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
         <script>
 
-        var c = {r:function(e) {$("#container_iframe").attr("src",e);}};
-
-
         if (location.pathname.substring(3) == "") {
           history.back();
         }
 
         if (location.pathname.substring(3) == "undefined") {
-          c.r("https://apps.ypig.tk/url.html?e=该链接所属服务器没有响应");
+          $("#container_iframe").attr("src","https://apps.ypig.tk/url.html?e=该链接所属服务器没有响应");
         }
 
         if (location.pathname.substring(0,3) == "/p/") {
-          c.r("https://apps.ypig.tk/url.html?e=" + location.pathname.substring(3));
+          $("#container_iframe").attr("src","https://apps.ypig.tk/url.html?e=" + location.pathname.substring(3));
         }
 
         $("#tip").text("找不到该页面");
