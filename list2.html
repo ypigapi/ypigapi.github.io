@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+
+  <title>PigLinker</title>
+
+  <!--<link rel="icon" href="favicon" type="image/x-icon">-->
+
+  <link rel="stylesheet" href="./css/mdui.min.css">
+  <link rel="stylesheet" href="./css/colorset.css">
+
+  <script src="./js/b6.js"></script>
+  <script src="./js/jquery.min.js"></script>
+
+  <script>
+    /* libraries */
+    function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var url = decodeURI(decodeURI(window.location.search))
+      var r = url.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
+    }
+  </script>
+</head>
+
+<body class="mdui-theme-primary-indigo mdui-theme-layout-lightmdui-theme-accent-blue">
+
+  <main class="mdui-container mdui-p-y-4">
+    <div class="mdui-panel mdui-typo" mdui-panel>
+      <div class="mdui-panel-item mdui-panel-item-open">
+        <div class="mdui-panel-item-header mdui-ripple">
+          <h3>文件</h3>
+          <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+        </div>
+        <div class="mdui-panel-item-body">
+          <ul class="mdui-list" id="link_list_show">
+            <!--
+              <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">send</i>
+                <div class="mdui-list-item-content" href="javascript:void(0);">还没有链接噢~</div>
+              </li>
+              -->
+          </ul>
+          <div class="mdui-progress" id="link_list_load">
+            <div class="mdui-progress-indeterminate"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      if (!getQueryString("e")) {
+        return;
+      }
+      var e = eval(getQueryString("e"));
+      for (var i = 0;i < e.length;i++) {
+        var temp = e[i].split("-");
+        var _temp = [];
+        if (temp.length > 2) {
+          _temp[1] = temp[temp.length-1];
+          for (var j = 0;j < temp.length-1;j ++) {
+            _temp[0] = (_temp[0] != undefined ? _temp[0] : "") + temp[j];
+          }
+          temp[0] = _temp[0];
+          temp[1] = _temp[1];
+        }
+        $('<li class="mdui-list-item mdui-ripple"><div class="mdui-list-item-content" href="javascript:void(0);" onclick="alert(' + "'" + temp[1] + "'" + ')">' + temp[0] + '</div></li>').appendTo("#link_list_show");
+      }
+      $("#link_list_load").fadeOut();
+    })();
+  </script>
+
+  <script src="./js/mdui.min.js"></script>
+</body>
+
+</html>
