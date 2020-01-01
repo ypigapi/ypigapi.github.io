@@ -28,7 +28,7 @@
             请稍等
         </p>
         <div style="align:center;text-align:center;" class="mdui-spinner" id="my-spinner"></div>
-        <iframe style="width:100%;height:100%;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="" src="" id="container_iframe"></iframe>
+        <iframe style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="$(\"container_iframe\").attr(\"style\",\"width:100%;height:100%;\")" src="" id="container_iframe"></iframe>
         <script>
 
           if (location.pathname.substring(3) == "") {
