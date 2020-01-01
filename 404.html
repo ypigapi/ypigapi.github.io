@@ -8,11 +8,11 @@
             html, body {
                 width: 100%;
                 height: 100%;
-                margin: 0; 
+                margin: 0;
                 padding: 0;
             }
-            #my-spinner {
-                top: 50%; /*偏移*/
+            #myspinner {
+                top: 50%;
                 transform: translateY(-50%);
                 position: relative;
             }
@@ -27,8 +27,8 @@
         <p style="display:none;" id="tip">
             请稍等
         </p>
-        <div style="align:center;text-align:center;" class="mdui-spinner" id="my-spinner"></div>
-        <iframe style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="$(\"container_iframe\").attr(\"style\",\"width:100%;height:100%;\")" src="" id="container_iframe"></iframe>
+        <div style="align:center;text-align:center;" class="mdui-spinner" id="myspinner"></div>
+        <iframe style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="$(\"#container_iframe\").attr(\"style\",\"width:100%;height:100%;\")" src="" id="container_iframe"></iframe>
         <script>
 
           if (location.pathname.substring(3) == "") {
