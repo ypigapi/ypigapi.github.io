@@ -3,17 +3,23 @@
         <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
         <title>PigLinker</title>
         <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="./css/mdui.min.css">
+        <style>
+              html,body {
+                  width: 100%;
+                  height: 100%;
+                  margin: 0;
+                  padding: 0;
+             }
+        </style>
     </head>
     <body>
-
-        <link rel='stylesheet prefetch' href='https://ypig.tk/styles/material.indigo-pink.min.css'>
-        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-        <script src='https://ypig.tk/styles/material.min.js'></script>
 
         <p style="display:none;" id="tip">
             请稍等
         </p>
-        <iframe style="width:100%;height:100%;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload="" src="" id="container_iframe"></iframe>
+        <div style="display:block;" class="mdui-spinner" id="myspinner"></div>
+        <iframe style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" onload='$("#container_iframe").attr("style","width:100%;height:100%;")' src="" id="container_iframe"></iframe>
         <script>
 
           if (location.pathname.substring(3) == "") {
@@ -33,8 +39,9 @@
             $("#tip").text("找不到该页面");
             $("#tip").attr("style","text-align:center;display:none;");
             $("#tip").fadeIn();
-
+            $("#myspinner").fadeOut();
           }
         </script>
+        <script src="./js/mdui.js"></script>
     </body>
 </html>
