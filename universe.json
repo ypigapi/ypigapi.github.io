@@ -1,11 +1,20 @@
 {
-    "a": true,
-    "v": "2.8",
-    "u": "https://www.lanzoui.com/b03n1hf6b",
-    "t": "update info",
-    "t2": "",
-    "s": false,
-    
-    "appVerify": "a2fba1f4a7f7f0f4f2f6a1f7f2f5f0a2a6f5a0fbf7a0f0f6f1a5a5a1f3a1fbf3",
-    "host": "http://app.cnfix.tk/"
+    "version": "2.9",
+    "2.9": {
+        "update": {
+            "url": "https:\/\/www.baidu.com\/",
+            "info": "有新更新"
+        },
+        "dialog": {
+            "show": true,
+            "compute": false,
+            "info": "欢迎使用"
+        },
+        "data": {
+            "key": "f0faf7f7a2f2a6f3f7a2f7a1f6f6f4f1fafaf6f5f0a7faf5a2faa1f0f5f3f1a0",
+            "modules": {
+                "android.jar": "https:\/\/www.baidu.com\/"
+            }
+        }
+    }
 }
