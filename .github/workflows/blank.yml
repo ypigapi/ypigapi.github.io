@@ -9,6 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           date +%s > auto
+          git diff
           git config --global user.email "ypigapi@example.com"
           git config --global user.name "ypigapi"
           git add auto
