@@ -1,0 +1,16 @@
+name: update
+on: 
+  schedule:
+    - cron:  '* * * * *'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          date +%s > auto
+          git config --global user.email "ypigapi@example.com"
+          git config --global user.name "ypigapi"
+          git add auto
+          git commit -m "update"
+          git push
