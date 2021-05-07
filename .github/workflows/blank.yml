@@ -1,17 +1,17 @@
 name: update
 on: 
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '0 0/6 * * *'
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
-          date +%s > auto
+          date +%s000 | md5sum > auto.json
           git diff
           git config --global user.email "ypigapi@example.com"
           git config --global user.name "ypigapi"
-          git add auto
+          git add auto.json
           git commit -m "update"
           git push
