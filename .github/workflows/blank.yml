@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          date +%s000 | md5sum > auto.json
+          date -u +%Y%mforeach | md5sum > auto.json
           git diff
           git config --global user.email "ypigapi@example.com"
           git config --global user.name "ypigapi"
