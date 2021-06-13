@@ -1,20 +1,55 @@
 {
-    "version": "2.9",
+    "version": "3.07",
     "2.9": {
         "update": {
-            "url": "https:\/\/www.baidu.com\/",
-            "info": "有新更新"
+            "url": "https://ypig.lanzoui.com/ivtEVq5i79a",
+            "info": "发现新版，点击确定下载"
         },
         "dialog": {
             "show": true,
-            "compute": false,
-            "info": "欢迎使用"
+            "compute": true,
+            "info": "登录功能暂不对外开放，如果您没有账号，请勿登录。"
         },
         "data": {
-            "key": "f0faf7f7a2f2a6f3f7a2f7a1f6f6f4f1fafaf6f5f0a7faf5a2faa1f0f5f3f1a0",
-            "modules": {
-                "android.jar": "https:\/\/www.baidu.com\/"
-            }
+            "path": "https://service-g8yg3yj2-1258307695.gz.apigw.tencentcs.com/release/universe/",
+            "path2": "https://service-4rds1xs4-1258307695.gz.apigw.tencentcs.com/release/",
+            "function": [
+                {
+                    "icon": "e9c6",
+                    "title": "反编译",
+                    "action": "decompile"
+                },
+                {
+                    "icon": "e7df",
+                    "title": "编写smali",
+                    "action": "edit_smali"
+                },
+                {
+                    "icon": "e7df",
+                    "title": "编写java",
+                    "action": "edit_java"
+                },
+                {
+                    "icon": "e97b",
+                    "title": "jar与dex互转",
+                    "action": "convert"
+                },
+                {
+                    "icon": "e6e5",
+                    "title": "so字符常量编辑",
+                    "action": "edit_so"
+                },
+                {
+                    "icon": "e6e5",
+                    "title": "so汇编编辑",
+                    "action": "edit_asm"
+                },
+                {
+                    "icon": "e75f",
+                    "title": "文件浏览模式",
+                    "action": "file_view"
+                }
+            ]
         }
     }
 }
